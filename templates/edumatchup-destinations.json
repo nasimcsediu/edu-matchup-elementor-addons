@@ -1,0 +1,10 @@
+{
+  "version": "0.4",
+  "title": "EduMatchup Destinations Page",
+  "type": "page",
+  "content": [
+    { "id": "empintro1", "elType": "widget", "widgetType": "emea-page-intro", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emdird001", "elType": "widget", "widgetType": "emea-destination-directory", "settings": {}, "elements": [], "isInner": false }
+  ],
+  "page_settings": []
+}

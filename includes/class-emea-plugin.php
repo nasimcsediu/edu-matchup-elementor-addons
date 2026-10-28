@@ -21,6 +21,7 @@ final class Plugin {
 		add_action( 'elementor/elements/categories_registered', array( $this, 'register_category' ) );
 		add_action( 'elementor/widgets/register', array( $this, 'register_widgets' ) );
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'register_styles' ) );
+		add_action( 'elementor/frontend/after_register_scripts', array( $this, 'register_scripts' ) );
 	}
 
 	public function register_category( $elements_manager ) {
@@ -34,6 +35,10 @@ final class Plugin {
 		wp_register_style( 'emea-home-widgets', EMEA_URL . 'assets/css/home-widgets.css', array(), EMEA_VERSION );
 	}
 
+	public function register_scripts() {
+		wp_register_script( 'emea-destination-filters', EMEA_URL . 'assets/destination-filters.js', array(), EMEA_VERSION, true );
+	}
+
 	public function register_widgets( $widgets_manager ) {
 		require_once EMEA_PATH . 'includes/widgets/class-emea-base-widget.php';
 		$files = array(
@@ -44,6 +49,8 @@ final class Plugin {
 			'class-emea-process-widget.php',
 			'class-emea-tools-widget.php',
 			'class-emea-cta-widget.php',
+			'class-emea-page-intro-widget.php',
+			'class-emea-destination-directory-widget.php',
 		);
 		foreach ( $files as $file ) {
 			require_once EMEA_PATH . 'includes/widgets/' . $file;
@@ -56,6 +63,8 @@ final class Plugin {
 			'Process_Widget',
 			'Tools_Widget',
 			'Cta_Widget',
+			'Page_Intro_Widget',
+			'Destination_Directory_Widget',
 		);
 		foreach ( $classes as $class ) {
 			$qualified = __NAMESPACE__ . '\\Widgets\\' . $class;
