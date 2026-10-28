@@ -1,0 +1,15 @@
+{
+  "version": "0.4",
+  "title": "EduMatchup Homepage",
+  "type": "page",
+  "content": [
+    { "id": "emhero01", "elType": "widget", "widgetType": "emea-hero", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emdest01", "elType": "widget", "widgetType": "emea-destinations", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emserv01", "elType": "widget", "widgetType": "emea-services", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emarrv01", "elType": "widget", "widgetType": "emea-arrival-support", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emproc01", "elType": "widget", "widgetType": "emea-process", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emtool01", "elType": "widget", "widgetType": "emea-study-tools", "settings": {}, "elements": [], "isInner": false },
+    { "id": "emcta001", "elType": "widget", "widgetType": "emea-cta", "settings": {}, "elements": [], "isInner": false }
+  ],
+  "page_settings": []
+}
